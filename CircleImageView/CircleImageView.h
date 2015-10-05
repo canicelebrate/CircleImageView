@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CircleImageView : UIImageView
-
 - (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor borderWidth:(float)borderWidth;
 -(void)setTextViewWithText:(NSString *)text frame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font;
 -(void)setTopText:(NSString *)text backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font;

@@ -9,21 +9,41 @@
 #import "CircleImageView.h"
 
 @implementation CircleImageView
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor borderWidth:(float)borderWidth
-{
+
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setRoundedFrame];
+    }
+    return self;
+}
+
+-(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.layer.masksToBounds = YES;
-        CGPoint saveCenter = self.center;
-        CGRect newFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
-        self.frame = newFrame;
-        self.layer.cornerRadius = self.frame.size.width / 2.0;
-        self.center = saveCenter;
+        [self setRoundedFrame];
+    }
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor borderWidth:(float)borderWidth
+{
+    self = [self initWithFrame:frame];
+    if (self) {
         [self.layer setBackgroundColor:(backgroundColor.CGColor)];
         [self.layer setBorderColor:(borderColor.CGColor)];
         [self.layer setBorderWidth:borderWidth];
     }
     return self;
+}
+
+-(void)setRoundedFrame {
+    self.layer.masksToBounds = YES;
+    CGPoint saveCenter = self.center;
+    CGRect newFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, MIN(self.frame.size.width, self.frame.size.height), MIN(self.frame.size.width, self.frame.size.height));
+    self.frame = newFrame;
+    self.layer.cornerRadius = self.frame.size.width / 2.0;
+    self.center = saveCenter;
 }
 
 
