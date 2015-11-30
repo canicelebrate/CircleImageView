@@ -16,16 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CircleImageView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Easy way to create circular images"
 
   s.description  = <<-DESC
-                   A longer description of CircleImageView in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   Easy way to create circular images
                    DESC
 
   s.homepage     = "https://github.com/wott86/CircleImageView"
@@ -79,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/wott86/CircleImageView.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/wott86/CircleImageView.git", :tag => "1.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
