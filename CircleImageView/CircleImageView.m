@@ -88,4 +88,9 @@
     view.frame = CGRectMake(view.frame.origin.x,aux,view.frame.size.width,view.frame.size.height);
 }
 
+-(void)layoutSubviews {
+    [self setRoundedFrame];
+    [super layoutSubviews];
+}
+
 @end
