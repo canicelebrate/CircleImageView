@@ -37,6 +37,15 @@
     return self;
 }
 
+- (void)setBorderColor:(UIColor *)borderColor{
+    self.layer.borderColor = borderColor.CGColor;
+}
+
+- (UIColor *)borderColor{
+    
+    return [UIColor colorWithCGColor:self.layer.borderColor];
+}
+
 -(void)setRoundedFrame {
     self.layer.masksToBounds = YES;
     CGPoint saveCenter = self.center;
