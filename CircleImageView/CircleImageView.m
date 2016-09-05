@@ -43,6 +43,9 @@
     CGRect newFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, MIN(self.frame.size.width, self.frame.size.height), MIN(self.frame.size.width, self.frame.size.height));
     self.frame = newFrame;
     self.layer.cornerRadius = self.frame.size.width / 2.0;
+    if(self.borderColor){
+        self.layer.borderColor = [self.borderColor CGColor];
+    }
     self.center = saveCenter;
 }
 
