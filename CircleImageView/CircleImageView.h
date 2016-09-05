@@ -10,6 +10,8 @@
 
 @interface CircleImageView : UIImageView
 @property(null_unspecified, nonatomic,assign) IBInspectable UIColor *borderColor;
+@property(nonatomic,assign) IBInspectable CGFloat borderWidth;
+
 - (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor borderColor:(UIColor *)borderColor borderWidth:(float)borderWidth;
 -(void)setTextViewWithText:(NSString *)text frame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font;
 -(void)setTopText:(NSString *)text backgroundColor:(UIColor *)backgroundColor textColor:(UIColor *)textColor font:(UIFont *)font;
